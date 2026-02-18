@@ -1,0 +1,6 @@
+CREATE TABLE accounts (
+    account_id SERIAL PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    balance NUMERIC(15,2) DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
