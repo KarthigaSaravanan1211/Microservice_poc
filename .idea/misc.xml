@@ -8,7 +8,13 @@
         <option value="$PROJECT_DIR$/wallet-account-service/pom.xml" />
         <option value="$PROJECT_DIR$/wallet-discovery-server/pom.xml" />
         <option value="$PROJECT_DIR$/wallet-transaction-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../Fintech/wallet-user-service/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../Fintech/wallet-user-service/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="jbr-21" project-jdk-type="JavaSDK">

@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="wallet-discovery-server" />
       </profile>
-      <profile name="Annotation profile for wallet-transaction-service" enabled="true">
+      <profile name="Annotation profile for wallet-user-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
