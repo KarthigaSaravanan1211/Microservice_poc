@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: wallet-account-service
+    name: WALLET-ACCOUNT-SERVICE
 
   datasource:
     url: jdbc:postgresql://localhost:5432/account_db
@@ -13,6 +13,9 @@ spring:
 
   flyway:
     enabled: true
+
+  kafka:
+    bootstrap-servers: localhost:9092   # ⭐ VERY IMPORTANT
 
 eureka:
   client:

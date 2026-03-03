@@ -55,5 +55,10 @@ public class TransactionRepository {
         return jdbcTemplate.queryForList(sql, userId, userId);
     }
 
+    public List<Map<String, Object>> findAll() {
+        String sql = "SELECT * FROM transactions ORDER BY created_at DESC";
+        return jdbcTemplate.queryForList(sql);
+    }
+
 
 }

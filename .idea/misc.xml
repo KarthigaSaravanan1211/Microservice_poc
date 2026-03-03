@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/wallet-discovery-server/pom.xml" />
         <option value="$PROJECT_DIR$/wallet-transaction-service/pom.xml" />
         <option value="$PROJECT_DIR$/../Fintech/wallet-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/wallet-notification-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

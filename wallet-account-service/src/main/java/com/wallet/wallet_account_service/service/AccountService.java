@@ -7,6 +7,7 @@ import com.wallet.wallet_account_service.repository.AccountRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Service
 public class AccountService {
@@ -15,6 +16,16 @@ public class AccountService {
 
     public AccountService(AccountRepository repo) {
         this.repo = repo;
+    }
+    
+    public List<Account> getAllAccounts() {
+        return repo.findAll();
+    }
+    
+    public Account getAccountById(Long accountId) {
+        return repo.findById(accountId)
+                .orElseThrow(() -> 
+                        new AccountNotFoundException("Account not found with id: " + accountId));
     }
 
     public void createAccount(Long userId) {
@@ -51,6 +62,7 @@ public class AccountService {
         }
 
         Account account = getAccountByUserId(userId);
+        
 
         if (account.getBalance().compareTo(amount) < 0) {
             throw new InsufficientBalanceException("Insufficient balance");

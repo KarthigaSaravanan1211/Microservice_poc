@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -15,6 +16,21 @@ public class AccountRepository {
 
     public AccountRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+    
+    public List<Account> findAll() {
+        String sql = "SELECT account_id AS accountId, user_id AS userId, balance FROM accounts";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Account.class));
+    }
+    
+    public Optional<Account> findById(Long accountId) {
+        String sql = "SELECT account_id AS accountId, user_id AS userId, balance " +
+                "FROM accounts WHERE account_id = ?";
+        return jdbcTemplate.query(
+                sql,
+                new BeanPropertyRowMapper<>(Account.class),
+                accountId
+        ).stream().findFirst();
     }
 
     public void createAccount(Long userId) {

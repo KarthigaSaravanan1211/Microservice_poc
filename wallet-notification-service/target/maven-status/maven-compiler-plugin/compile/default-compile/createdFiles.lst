@@ -1,0 +1,4 @@
+com/wallet/wallet_notification_server/dto/TransactionEvent.class
+com/wallet/wallet_notification_server/WalletNotificationServerApplication.class
+com/wallet/wallet_notification_server/config/KafkaConsumerConfig.class
+com/wallet/wallet_notification_server/service/TransactionConsumer.class

@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -16,6 +17,16 @@ public class AccountController {
 
     public AccountController(AccountService service) {
         this.service = service;
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Account>> getAllAccounts() {
+        return ResponseEntity.ok(service.getAllAccounts());
+    }
+    
+    @GetMapping("/id/{accountId}")
+    public ResponseEntity<Account> getAccountById(@PathVariable Long accountId) {
+        return ResponseEntity.ok(service.getAccountById(accountId));
     }
 
     @PostMapping("/create/{userId}")

@@ -41,4 +41,9 @@ public class TransactionController {
         return service.getTransactions(userId);
     }
 
+    @GetMapping
+    public List<Map<String, Object>> getAllTransactions() {
+        return service.getAllTransactions();
+    }
+
 }
